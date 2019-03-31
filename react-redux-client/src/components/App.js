@@ -39,9 +39,6 @@ export default class App extends React.Component {
   render(){
 
     const appState = this.props.mappedAppState;
-
-    console.log("origin",document.location.origin);
-    console.log("pathname",document.location.pathname);
     
     return(
       <div>
