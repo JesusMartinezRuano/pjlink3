@@ -3,5 +3,6 @@
     "debug.console.fontSize": 14,
     "window.zoomLevel": -1,
     "terminal.integrated.fontSize": 14,
-    "markdown.preview.fontSize": 14
+    "markdown.preview.fontSize": 14,
+    "github.remoteName": "https://github.com/JesusMartinezRuano"
 }
