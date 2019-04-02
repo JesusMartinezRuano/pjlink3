@@ -35,6 +35,11 @@ export default class App extends React.Component {
         return ;
       }
   }
+
+  genPDFDetalles(e) {
+    e.preventDefault();
+    console.log("estamos en Detalle");
+  }
   
   render(){
 
@@ -59,7 +64,7 @@ export default class App extends React.Component {
         
       <NavDropdown disabled={appState.showAddProyector} eventKey={2} title="Informes" id="basic-nav-dropdown">
         <LinkContainer to={{ pathname: '/', query: {  } }}>
-          <MenuItem  disabled={(document.location.pathname==='/')} eventKey={2.1}>Detalles</MenuItem>
+          <MenuItem  disabled={(document.location.pathname==='/')} eventKey={2.1} onClick={this.genPDFDetalles}>Detalles</MenuItem>
         </LinkContainer>
         <LinkContainer  to={{ pathname: '/', query: {  } }}>
           <MenuItem  eventKey={2.2}>Todos</MenuItem>
