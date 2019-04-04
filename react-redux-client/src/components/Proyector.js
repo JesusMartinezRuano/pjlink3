@@ -16,8 +16,10 @@ var colRigth = {                                                //added inline c
   width:'50%'
 };
 
-export default class Proyector extends React.Component { 
 
+
+export default class Proyector extends React.Component {  
+  
   componentDidMount(){
     this.props.mappedfetchProyectorById(this.props.params.id);    
   }

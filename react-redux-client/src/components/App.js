@@ -4,6 +4,8 @@ import { Navbar,Nav,NavItem,NavDropdown ,MenuItem} from 'react-bootstrap';
 import { IndexLinkContainer,LinkContainer} from 'react-router-bootstrap';
 import './App.css';
 import ProyectorForm from './ProyectorForm';
+import {genPDF} from '../actions/genPDF';
+
 
 export default class App extends React.Component {
   constructor(props){
@@ -36,10 +38,7 @@ export default class App extends React.Component {
       }
   }
 
-  genPDFDetalles(e) {
-    e.preventDefault();
-    console.log("estamos en Detalle");
-  }
+   
   
   render(){
 
@@ -47,7 +46,7 @@ export default class App extends React.Component {
     
     return(
       <div>
-      <Navbar inverse  collapseOnSelect className="customNav">
+      <Navbar inverse collapseOnSelect className="customNav">
     <Navbar.Header>
       <Navbar.Brand>
         <a href="/#">Gestión de proyectores</a>
@@ -63,9 +62,9 @@ export default class App extends React.Component {
       </Nav>
         
       <NavDropdown disabled={appState.showAddProyector} eventKey={2} title="Informes" id="basic-nav-dropdown">
-        <LinkContainer to={{ pathname: '/', query: {  } }}>
-          <MenuItem  disabled={(document.location.pathname==='/')} eventKey={2.1} onClick={this.genPDFDetalles}>Detalles</MenuItem>
-        </LinkContainer>
+        {/* <LinkContainer to={{ pathname: '/', query: {  } }}> */}
+          <MenuItem  disabled={(document.location.pathname==='/')} eventKey={2.1} onClick={()=>genPDF(this.props)}>Detalles</MenuItem>
+        {/* </LinkContainer> */}
         <LinkContainer  to={{ pathname: '/', query: {  } }}>
           <MenuItem  eventKey={2.2}>Todos</MenuItem>
         </LinkContainer>
