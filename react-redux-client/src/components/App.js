@@ -63,7 +63,7 @@ export default class App extends React.Component {
         
       <NavDropdown disabled={appState.showAddProyector} eventKey={2} title="Informes" id="basic-nav-dropdown">
         {/* <LinkContainer to={{ pathname: '/', query: {  } }}> */}
-          <MenuItem  disabled={(document.location.pathname==='/')} eventKey={2.1} onClick={()=>genPDF(this.props)}>Detalles</MenuItem>
+          <MenuItem  disabled={(document.location.pathname==='/')} eventKey={2.1} onClick={()=>genPDF(this.props.params.id)}>Detalles</MenuItem>
         {/* </LinkContainer> */}
         <LinkContainer  to={{ pathname: '/', query: {  } }}>
           <MenuItem  eventKey={2.2}>Todos</MenuItem>
