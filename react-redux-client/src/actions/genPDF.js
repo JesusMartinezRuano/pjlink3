@@ -23,7 +23,7 @@ export function genPDF(proyectorId) {
 
         let dataSrc = doc.output('datauristring');
         let w= window.open("", "MsgWindow");
-        w.document.write("<html><head><title>jsPDF</title></head><body><embed src=" + 
+        w.document.write("<html><head><title>"+proData.ubiAlias+"</title></head><body><embed src=" + 
         dataSrc + " width='100%' height='100%'></embed></body></html>");
 
  }
