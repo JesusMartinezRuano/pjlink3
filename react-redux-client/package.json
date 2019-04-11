@@ -18,7 +18,8 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "svg-inline-loader": "^0.8.0",
-    "svg-inline-react": "^3.1.0"
+    "svg-inline-react": "^3.1.0",
+    "svg-to-pdfkit": "^0.1.7"
   },
   "scripts": {
     "start": "react-scripts start",
